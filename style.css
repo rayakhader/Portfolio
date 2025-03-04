@@ -61,7 +61,7 @@ h1{
 h2{
     margin: 0;
 }
-h1,h2:not(.project-name){
+h1,h2{
     letter-spacing: 5px;
 }
 .overlay
@@ -82,7 +82,10 @@ h1,h2:not(.project-name){
 @media (max-width:600px) {
     .nav-list{
         display: none;
-    }    
+    } 
+    .overlay h1{
+        text-align: center;
+    }   
 }
 #about{
     width: 70%;
@@ -112,15 +115,16 @@ h1,h2:not(.project-name){
     display: block;
     border-bottom:5px solid #2314AE ;
     margin-bottom: 15px;
+    width: 10%;
 }
-#projects,.project-desc, .project{
+#projects,.project-desc, .project, #skills{
     padding: 12px;
 }
-#projects-header{
+#projects-header, #skills-header{
     text-align: center;
     text-shadow: 2px 3px 4px gray;
 }
-#projects-header:hover{
+#projects-header:hover, #skills-header:hover{
     transform: scale(0.9);
 }
 .project{
@@ -143,4 +147,78 @@ h1,h2:not(.project-name){
     padding: 12px;
     font-weight: bold;
     color: #2314AE;
+}
+.project > img{
+    object-fit: contain;
+}
+.skills-container{
+    width: 50%;
+    margin: auto;
+    padding: 12px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+}
+@media only screen and (max-width: 700px) {
+    .project{
+        flex-wrap: wrap;
+    }
+    .project > img{
+        width: 100%;
+    }
+    .skills-container{
+        width: 100%;
+        box-sizing: border-box;
+        grid-auto-rows: auto;
+    }
+    #lang,#data-base,#others{
+        grid-column: span 2;
+    }
+    .icons-group{
+        flex-wrap: wrap;
+    } 
+  }
+  
+  @media only screen and (min-width:700px) and (max-width: 900px) {
+    .project{
+       flex-wrap: wrap;
+    }
+    .project > img{
+        width: 100%;
+    }
+    .skills-container{
+        width: 100%;
+        box-sizing: border-box;
+        grid-auto-rows: auto;
+    }
+    .icons-group{
+        flex-wrap: wrap;
+    } 
+  }
+.skills-group{
+    padding: 12px;
+    background-color: lightgray;
+    color: black;
+    border-radius: 10px;
+}
+h3{
+    font-weight: bold;
+}
+#web-tech{
+    grid-column: span 2;
+}
+.icons-group{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 12px;
+}
+.icons-group i{
+    padding: 12px;
+}
+.icons-group i:hover, .icons-group img:hover{
+    transform: scale(1.5);
+}
+.devicon-oracle-original,.devicon-tailwindcss-plain{
+    font-size: 50px;
 }
