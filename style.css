@@ -177,6 +177,12 @@ h1,h2{
     .icons-group{
         flex-wrap: wrap;
     } 
+    #contact{
+        flex-direction: column;
+    }
+    #contact div, #contact form{
+        width: 100%;
+    }
   }
   
   @media only screen and (min-width:700px) and (max-width: 900px) {
@@ -222,3 +228,71 @@ h3{
 .devicon-oracle-original,.devicon-tailwindcss-plain{
     font-size: 50px;
 }
+#contact{
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+#contact-header{
+    text-shadow: 2px 3px 4px gray;
+}
+#contact div, form{
+    width: 50%;
+}
+#contact div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    box-sizing: border-box;
+}
+.my-cv{
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    background-color: #2314AE;
+    border: none;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+input{
+    height: 50px;
+    width: 100%;
+    border-radius:10px ;
+    border: none;
+    padding: 12px;
+    box-sizing: border-box;
+}
+textarea{
+    width: 100%;
+    border-radius:10px ;
+    border: none;
+    padding: 12px;
+    box-sizing: border-box;
+}
+label{
+    display: block;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    color: white;
+    padding: 12px;
+}
+#footer i{
+    color: white;
+    padding: 12px;
+}
+form > button{
+   width: fit-content;
+   margin: auto;
+}
+
+
+
